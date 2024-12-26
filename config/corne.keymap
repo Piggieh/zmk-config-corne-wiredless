@@ -76,9 +76,9 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans             &trans  &trans  &kp RS(DELETE)
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans             &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans             &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans             &trans             &trans            &kp RS(DELETE)
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &kp EXCL           &ext_power EP_OFF  &ext_power EP_ON  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &bl BL_INC         &bl BL_OFF         &bl BL_ON         &trans
                         &trans  &trans  &trans    &trans  &bl BL_TOG  &ext_power EP_TOG
             >;
         };
