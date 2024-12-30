@@ -48,15 +48,6 @@
         };
     };
 
-    macros {
-        Mute_Sound: Mute_Sound {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-            label = "MUTE_SOUND";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
