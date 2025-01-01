@@ -1,0 +1,22 @@
+/ {
+    chosen {
+        zmk,backlight = &backlight;
+    };
+
+    backlight: pwmleds {
+        compatible = "pwm-leds";
+        pwm_led_0 {
+            pwms = <&pwm0 6 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+            label = "Backlight LED";
+            // We use pin P0.06 (represented by the '6' in pwm0 6)
+            // The PWM_MSEC(20) sets a 20ms period which gives us a good frequency for PWM
+        };
+    };
+};
+
+&pwm0 {
+    status = "okay";
+    pinctrl-0 = <&pwm0_default>;
+    pinctrl-1 = <&pwm0_sleep>;
+    pinctrl-names = "default", "sleep";
+};
