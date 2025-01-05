@@ -53,6 +53,8 @@
             label = "MODTAP_CTRL_GUI";
             #binding-cells = <0>;
             bindings = <&mt LCTRL LEFT_GUI>, <&kp LEFT_GUI>;
+
+            tapping-term-ms = <100>;
         };
     };
 
