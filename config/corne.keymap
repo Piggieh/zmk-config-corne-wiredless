@@ -47,6 +47,13 @@
             #binding-cells = <0>;
             bindings = <&mo 2>, <&mo 4>;
         };
+
+        ModTap_Ctrl_Gui: ModTap_Ctrl_Gui {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MODTAP_CTRL_GUI";
+            #binding-cells = <0>;
+            bindings = <&mt LCTRL LEFT_GUI>, <&kp LEFT_GUI>;
+        };
     };
 
     keymap {
@@ -60,10 +67,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mt GRAVE ESCAPE  &kp Q  &kp W  &kp E               &kp R         &kp T        &kp Y        &kp U  &kp I                 &kp O    &kp P     &kp BSPC
-&lt 1 TAB         &kp A  &kp S  &kp D               &kp F         &kp G        &kp H        &kp J  &kp K                 &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X  &kp C               &kp V         &kp B        &kp N        &kp M  &kp COMMA             &kp DOT  &kp FSLH  &lt 3 ENTER
-                                &mt LCTRL LEFT_GUI  &kp LEFT_ALT  &kp SPACE    &lt 3 ENTER  &mo 1  &TapDacne_Layers_2_4
+&mt GRAVE ESCAPE  &kp Q  &kp W  &kp E             &kp R         &kp T        &kp Y        &kp U  &kp I                 &kp O    &kp P     &kp BSPC
+&lt 3 TAB         &kp A  &kp S  &kp D             &kp F         &kp G        &kp H        &kp J  &kp K                 &kp L    &kp SEMI  &kp SQT
+&kp LSHFT         &kp Z  &kp X  &kp C             &kp V         &kp B        &kp N        &kp M  &kp COMMA             &kp DOT  &kp FSLH  &lt 3 ENTER
+                                &ModTap_Ctrl_Gui  &kp LEFT_ALT  &kp SPACE    &lt 3 ENTER  &mo 1  &TapDacne_Layers_2_4
             >;
         };
 
@@ -112,6 +119,15 @@
 &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans
 &trans  &kp F11  &kp F12  &trans  &trans  &trans     &trans  &trans          &trans          &trans           &trans          &trans
                           &trans  &trans  &trans     &trans  &trans          &trans
+            >;
+        };
+
+        Gaming {
+            bindings = <
+&kp ESCAPE  &kp Q  &kp W  &kp E      &kp R         &kp T        &kp Y        &kp U  &kp I                 &kp O    &kp P     &kp BSPC
+&kp TAB     &kp A  &kp S  &kp D      &kp F         &kp G        &kp H        &kp J  &kp K                 &kp L    &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z  &kp X  &kp C      &kp V         &kp B        &kp N        &kp M  &kp COMMA             &kp DOT  &kp FSLH  &lt 3 ENTER
+                          &kp LCTRL  &kp LEFT_ALT  &kp SPACE    &lt 3 ENTER  &mo 1  &TapDacne_Layers_2_4
             >;
         };
     };
