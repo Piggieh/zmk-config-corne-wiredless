@@ -53,13 +53,11 @@
             bindings = <&mo 2>, <&mo 4>;
         };
 
-        ModTap_Ctrl_Gui: ModTap_Ctrl_Gui {
+        ModTap_Alt_Gui: ModTap_Alt_Gui {
             compatible = "zmk,behavior-tap-dance";
-            label = "MODTAP_CTRL_GUI";
+            label = "MODTAP_ALT_GUI";
             #binding-cells = <0>;
-            bindings = <&mt LCTRL LEFT_GUI>, <&kp LEFT_GUI>;
-
-            tapping-term-ms = <170>;
+            bindings = <&mt LEFT_ALT LEFT_GUI>, <&kp LEFT_GUI>;
         };
     };
 
@@ -74,10 +72,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mt GRAVE ESCAPE  &kp Q  &kp W  &kp E             &kp R         &kp T        &kp Y        &kp U  &kp I                 &kp O    &kp P     &kp BSPC
-&lt 3 TAB         &kp A  &kp S  &kp D             &kp F         &kp G        &kp H        &kp J  &kp K                 &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X  &kp C             &kp V         &kp B        &kp N        &kp M  &kp COMMA             &kp DOT  &kp FSLH  &lt 3 ENTER
-                                &ModTap_Ctrl_Gui  &kp LEFT_ALT  &kp SPACE    &lt 3 ENTER  &mo 1  &TapDacne_Layers_2_4
+&mt GRAVE ESCAPE  &kp Q  &kp W  &kp E      &kp R            &kp T        &kp Y        &kp U  &kp I                 &kp O    &kp P     &kp BSPC
+&lt 3 TAB         &kp A  &kp S  &kp D      &kp F            &kp G        &kp H        &kp J  &kp K                 &kp L    &kp SEMI  &kp SQT
+&kp LSHFT         &kp Z  &kp X  &kp C      &kp V            &kp B        &kp N        &kp M  &kp COMMA             &kp DOT  &kp FSLH  &lt 3 ENTER
+                                &kp LCTRL  &ModTap_Alt_Gui  &kp SPACE    &lt 3 ENTER  &mo 1  &TapDacne_Layers_2_4
             >;
         };
 
